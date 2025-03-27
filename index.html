@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>York Tech Football</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #095641; /* Changed to deep green */
+            padding: 20px;
+            position: relative; /* To position the dropdown menu */
+        }
+        .logo {
+            width: 225px; /* Increased the logo size by 50% from 150px to 225px */
+            margin-top: -15px; /* Slight adjustment to prevent the logo from shifting down */
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            left: 20px; /* Changed from right to left to shift the menu to the left */
+            font-size: 16px;
+        }
+        .dropdown button {
+            background-color: #000; /* Changed to black */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .dropdown button:hover {
+            background-color: #1e1e1e;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1e1e1e;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #095641;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #1e1e1e;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .board-section {
+            background-color: #1e1e1e;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #095641;
+        }
+        .board-section h2 {
+            color: #095641;
+            margin-bottom: 15px;
+        }
+        .board-section p {
+            color: #ddd;
+            font-style: italic;
+        }
+        .calendar-section {
+            background-color: #333;
+            margin: 20px;
+            border-radius: 8px;
+            border: 2px solid #095641;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            flex-direction: column;
+        }
+        .calendar-section h3 {
+            font-size: 28px; /* Larger font size */
+            color: black; /* Black color for the title */
+            margin-bottom: 10px; /* Adds some space between the title and the image */
+            padding: 10px;
+            background-color: #fff; /* White background for the title box */
+            border-radius: 5px; /* Rounded corners for the title box */
+            display: inline-block;
+        }
+        .calendar-section img {
+            width: 25%; /* Image width */
+            height: auto;
+            border-radius: 12px; /* Rounded corners for the image */
+            border: 2px solid #095641; /* Deep green border around the image */
+            padding: 5px; /* Adds padding inside the border to make it tighter */
+        }
+        .contact-section {
+            background-color: #1e1e1e;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            border: 2px solid #095641;
+        }
+        .contact-section h3 {
+            color: #095641;
+            margin-bottom: 15px;
+        }
+        .contact-section p {
+            color: #ddd;
+            font-size: 18px;
+        }
+        footer {
+            background-color: #000;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 2px solid #095641;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #095641;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+        .back-to-top:hover {
+            background-color: #1e1e1e;
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                width: 150px; /* Adjust logo size for smaller screens */
+            }
+            .calendar-section img {
+                width: 100%;
+                height: auto;
+            }
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Displaying the logo image directly from ytechlogo.png -->
+        <img src="ytechlogo.png" alt="York Tech Football Logo" class="logo">
+        <h1>York Tech Spartans Football</h1>
+        <div class="dropdown">
+            <button>Menu</button>
+            <div class="dropdown-content">
+                <a href="mtt.html">Meet the Team</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="newsletter.html">Newsletter/Recent Events</a>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <h2>Welcome to the Home of the Spartans!</h2>
+        <p>Stay updated with game schedules, player highlights, and team news.</p>
+    </div>
+
+    <div class="board-section">
+        <h2>A Word from Our Board</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac elementum tortor, et condimentum ex. Nulla facilisi. Curabitur nec magna vitae turpis condimentum tincidunt. Integer fringilla felis et libero gravida, nec luctus elit ullamcorper. Ut varius lorem non velit placerat, sit amet feugiat augue rhoncus.</p>
+    </div>
+
+    <!-- Main Calendar Section -->
+    <div class="calendar-section" id="calendar">
+        <h3>Main Calendar</h3>
+        <img src="calendar-image.png" alt="Football Team Calendar">
+    </div>
+
+    <!-- Location Section -->
+    <div class="contact-section" id="location">
+        <h3>Location</h3>
+        <p><strong>York County School of Technology</strong></p>
+        <p>2179 S. Queen St, York, PA 17402</p>
+        <p>Phone: 717-741-0820</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 York County School of Technology. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn">Back to Top</button>
+
+    <script>
+        var mybutton = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        mybutton.onclick = function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+</body>
+</html>
