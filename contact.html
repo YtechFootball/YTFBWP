@@ -3,9 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Page</title>
+    <title>York Tech Football Board Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #095641;
+            padding: 20px;
+            position: relative;
+        }
+        .logo {
+            width: 225px;
+            margin-top: -15px;
+        }
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 16px;
+        }
+        .dropdown button {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .dropdown button:hover {
+            background-color: #1e1e1e;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1e1e1e;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #095641;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .contact-section, .donation-section {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #095641;
+            text-align: left;
+        }
+        .contact-section h2, .donation-section h2 {
+            color: #095641;
+            margin-bottom: 15px;
+        }
+        .contact-list, .donation-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .contact-list li, .donation-list li {
+            font-size: 18px;
+            padding: 10px;
+            border-bottom: 1px solid #095641;
+        }
+        .contact-list li:last-child, .donation-list li:last-child {
+            border-bottom: none;
+        }
+        footer {
+            background-color: #000;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 2px solid #095641;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #095641;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+        .back-to-top:hover {
+            background-color: #1e1e1e;
+        }
+        @media (max-width: 600px) {
+            .logo {
+                width: 150px;
+            }
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact</h1>
+    <header>
+        <img src="ytechlogo.png" alt="York Tech Football Logo" class="logo">
+        <h1>Contact the York Tech Football Board & Coaches</h1>
+        <div class="dropdown">
+            <button>Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html">Homepage</a>
+                <a href="newsletter.html">Newsletter/Recent Events</a>
+                <a href="mtt.html">Meet The Team</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact the Board Section -->
+    <div class="contact-section">
+        <h2>Meet the Board & Contact Information</h2>
+        <ul class="contact-list">
+            <li>
+                <strong>James Anderson - President</strong><br>
+                Email: james.anderson@example.com<br>
+                Phone: (555) 123-4567
+            </li>
+            <li>
+                <strong>Emily Carter - Vice President</strong><br>
+                Email: emily.carter@example.com<br>
+                Phone: (555) 234-5678
+            </li>
+            <li>
+                <strong>Michael Thompson - Treasurer</strong><br>
+                Email: michael.thompson@example.com<br>
+                Phone: (555) 345-6789
+            </li>
+            <li>
+                <strong>Sarah Parker - Secretary</strong><br>
+                Email: sarah.parker@example.com<br>
+                Phone: (555) 456-7890
+            </li>
+            <li>
+                <strong>David White - Board Member</strong><br>
+                Email: david.white@example.com<br>
+                Phone: (555) 567-8901
+            </li>
+            <li>
+                <strong>Lisa Brown - Board Member</strong><br>
+                Email: lisa.brown@example.com<br>
+                Phone: (555) 678-9012
+            </li>
+        </ul>
+    </div>
+
+    <!-- Contact the Coaches Section -->
+    <div class="contact-section">
+        <h2>Contact the Coaches</h2>
+        <ul class="contact-list">
+            <li>
+                <strong>Coach John Smith - Head Coach</strong><br>
+                Email: john.smith@example.com<br>
+                Phone: (555) 789-0123
+            </li>
+            <li>
+                <strong>Coach Mike Johnson - Offensive Coordinator</strong><br>
+                Email: mike.johnson@example.com<br>
+                Phone: (555) 890-1234
+            </li>
+            <li>
+                <strong>Coach Sarah Brown - Defensive Coordinator</strong><br>
+                Email: sarah.brown@example.com<br>
+                Phone: (555) 901-2345
+            </li>
+            <li>
+                <strong>Coach David Lee - Special Teams Coordinator</strong><br>
+                Email: david.lee@example.com<br>
+                Phone: (555) 012-3456
+            </li>
+        </ul>
+    </div>
+
+    <!-- Donation Section -->
+    <div class="donation-section">
+        <h2>Support the York Tech Football Program</h2>
+        <ul class="donation-list">
+            <li>
+                <strong>PayPal:</strong> <a href="https://www.paypal.com/donate?hosted_button_id=EXAMPLE" target="_blank" style="color: #095641;">Donate via PayPal</a>
+            </li>
+            <li>
+                <strong>CashApp:</strong> $YorkTechFootball
+            </li>
+            <li>
+                <strong>Venmo:</strong> @YorkTechFootball
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 York County School of Technology. All Rights Reserved.</p>
+    </footer>
+
+    <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Back to Top</button>
+
+    <script>
+        // Show back-to-top button when scrolling down
+        window.onscroll = function() {
+            var backToTopButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
